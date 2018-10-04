@@ -10,28 +10,15 @@ import java.util.Scanner;
  */
 
 public class FibonacciCalculator {
-	public static void main(String args[]) {
-		System.out.println("Enter number upto which Fibonacci series to print: ");
+    public static long fibonacci(int n) {
+        if (n <= 1) return n;
+        else return fibonacci(n-1) + fibonacci(n-2);
+    }
 
-		int number = new Scanner(System.in).nextInt();
-		System.out.println("Fibonacci series upto " + number + " numbers : ");
-		
-		for (int i = 1; i <= number; i++) {
-			System.out.print(fibonacci(i) + " ");
-		}
-	}
+    public static void main(String[] args) {
+        int n = 5;
+        for (int i = 1; i <= n; i++)
+            System.out.println(i + ": " + fibonacci(i));
+    }
 
-	/*
-	 * * Java program for Fibonacci number using recursion. * This program uses tail
-	 * recursion to calculate Fibonacci number for a given number * @return
-	 * Fibonacci number
-	 */
-
-	public static int fibonacci(int number){
-		if(number == 1 || number == 2){
-			return 1; 
-		}
-		return fibonacci(number-1) + fibonacci(number -2);
-		
-	} 
 }

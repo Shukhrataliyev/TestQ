@@ -31,13 +31,13 @@ public class RemoveDupArr {
         {
             System.out.print(a[i]);
         }
+      
         System.out.print("\nAfter removing duplicates: ");
         int b=0;
         a[b]=a[0];
         for(int i=0;i<a.length;i++)
         {
-            if (a[b]!=a[i])
-            {
+            if (a[b]!=a[i]){
                 b++;
                 a[b]=a[i];
             }

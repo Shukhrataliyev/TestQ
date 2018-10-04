@@ -6,7 +6,7 @@ public class UniqueChar {
 	
 	public static void main(String[] args) {
 		
-		String str = "skdfskdfk2sdflsdfkkk";
+		String str = "asdfsddffd";
 		String unq = "";
 		
 		for (int i = 0; i < str.length(); i++) {

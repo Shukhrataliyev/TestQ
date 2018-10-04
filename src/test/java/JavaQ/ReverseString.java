@@ -2,18 +2,27 @@ package JavaQ;
 
 public class ReverseString {
 
-	public static void main(String[] args) {
-		System.out.println(reverseIt("Almaty"));
-		
-	}
-	public static String reverseIt(String source) {
-		int i, len = source.length();
-		StringBuilder dest = new StringBuilder(len);
+	public static void reverseWordInMyString(String str) {
 
-		for (i = (len - 1); i >= 0; i--) {
-			dest.append(source.charAt(i));
+		String[] words = str.split(" ");
+		String reversedString = "";
+
+		for (int i = 0; i < words.length; i++) {
+			String word = words[i];
+			String reverseWord = "";
+			for (int j = word.length() - 1; j >= 0; j--) {
+
+				reverseWord = reverseWord + word.charAt(j);
+			}
+			reversedString = reversedString + reverseWord + " ";
 		}
-
-		return dest.toString();
+		System.out.println(str);
+		System.out.println(reversedString);
 	}
+
+	public static void main(String[] args) {
+		reverseWordInMyString("Welcome to BeginnersBook");
+		reverseWordInMyString("This is an easy Java Program");
+	}
+
 }

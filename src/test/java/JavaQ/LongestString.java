@@ -12,25 +12,27 @@ public class LongestString {
 	public static void main(String[] args) {
 
 		System.out.println(longest("abc adas aaaaa xyztfh asdas xxxxxxxxxxxx"));
-		System.out.println(isRepeating("aaaa"));
+//		System.out.println(isRepeating("aaaa"));
 	}
 
 	public static String longest(String sentence) {
 
-		String str="";
-		String [] strArr=sentence.split(" "); 
-		Map<Integer, String> map= new TreeMap();
-		int count=0; 
-		
+		String str = "";
+		String[] strArr = sentence.split(" ");
+		Map<Integer, String> map = new TreeMap<>();
+		int count = 0;
+
 		for (String each : strArr) {
-			if(!(isRepeating(each))){
+			if (!(isRepeating(each))) {
 				map.put(each.length(), each);
-				if(each.length()>count){
-					count=each.length(); 
+				System.out.println("map :"+map);
+				if (each.length() > count) {
+					count = each.length();
+					System.out.println("count: "+count);
 				}
-				}
+			}
 		}
-		return map.get(count); 
+		return map.get(count);
 	}
 
 	public static boolean isRepeating(String str) {
@@ -38,15 +40,14 @@ public class LongestString {
 		List<String> lst = new ArrayList<>();
 		Set<String> set = new HashSet();
 		for (int i = 0; i < str.length(); i++) {
-			lst.add(""+str.charAt(i));
-			set.add(""+str.charAt(i));
+			lst.add("" + str.charAt(i));
+			set.add("" + str.charAt(i));
 		}
-		if ((lst.size()==set.size())) {
+		if ((lst.size() == set.size())) {
 			bool = false;
 		}
 
 		return bool;
 	}
-	
-	
+
 }

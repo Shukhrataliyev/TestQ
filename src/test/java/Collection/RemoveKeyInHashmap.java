@@ -18,11 +18,9 @@ public class RemoveKeyInHashmap {
 		hashmap.put("2", "Two");
 		hashmap.put("3", "Three");
 		hashmap.put("4", "Four");
+		hashmap.put("4", "Four");
 		hashmap.put("5", "Five");
 		hashmap.put("6", "Six");
-		String key = null;
-		String value = "java programming basics Interview questions";
-		hashmap.put(key, value);
 
 		/*
 		 * To remove a key value pair from HashMap use Object remove(Object key) method
@@ -30,8 +28,10 @@ public class RemoveKeyInHashmap {
 		 * no value was mapped.
 		 */
 
-		Object object = hashmap.remove("4");
+		Object object = hashmap.remove("5");
 		System.out.println(object + " Removed from HashMap");
+		
+		System.out.println("hashmap- "+hashmap);
 
 		if (!hashmap.isEmpty()) {
 

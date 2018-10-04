@@ -1,5 +1,7 @@
 package JavaQ;
 
+import java.util.Arrays;
+
 public class FindTopTwoinArray {
 	 
 public void findTwoMaxNumbers(int[] array){
@@ -18,8 +20,8 @@ for(int i:array){
 }
         
  
-  System.out.println("First Maximum Number: "+maxOne);
-  System.out.println("Second Maximum Number: "+maxTwo);
+//  System.out.println("First Maximum Number: "+maxOne);
+//  System.out.println("Second Maximum Number: "+maxTwo);
 }
      
 public static void main(String a[]){
@@ -29,6 +31,11 @@ public static void main(String a[]){
         obj.findTwoMaxNumbers(num);
        // obj.findTwoMaxNumbers(new int[]{4,5,6,90,1});
  
+        Arrays.sort(num);
+        System.out.println(Arrays.toString(num));
+        
+        
+        
 }
  
 }

@@ -33,7 +33,7 @@ public class PolindromeInteger {
 
         // if original and reverse of number is equal means
         // number is palindrome in Java
-        if (number == reverse) {
+        if (number == reverse && number > 10) {
             return true;
         }
         return false;
